@@ -4,7 +4,7 @@ The repository is meant for leveraging system development and robot deployment f
 
 ## Quick Start 
 
-The repository has been tested in Ubuntu 20.04 with [ROS Noetic](http://wiki.ros.org/noetic/Installation). Install dependencies with command lines below.
+The repository has been tested in Ubuntu 18.04 with [Ros Melodic](http://wiki.ros.org/melodic/Installation) and Ubuntu 20.04 with [ROS Noetic](http://wiki.ros.org/noetic/Installation). Install dependencies with command lines below.
 
 ```sudo apt update```
 
@@ -28,13 +28,15 @@ Source the ROS workspace and launch the system.
 
 ## Running the NVIDIA Isaac-Sim
 
+Hardware Requirement: Isaac-Sim requires **NVIDIA RTX GPU** with **470+ GPU driver** version. 
+
 This repository use Isaac-Sim environment for development. Download and Install the NVIDIA Isaac-Sim simulator environment from the [official guide](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/install_basic.html#isaac-sim-first-run). Also, our development enviroment depend on some example environment from the Nvidia. Thus, install and set up Nucleus server follow the instructions from [offical guide](https://docs.omniverse.nvidia.com/prod_nucleus/prod_nucleus.html).
 
 Then, running the simulation and load the robot into the Isaac-Sim. 
 
-```ISAAC_INSTALL_PATH/python.sh ./src/isaac_simulator/isaac_env/isaac_hospital_env.py```
+```~/.local/share/ov/pkg/isaac_sim-2021.2.1/python.sh ./src/isaac_simulator/isaac_env/isaac_hospital_env.py```
 
-The "ISAAC_INSTALL_PATH" here is usually locate at "~/.local/share/ov/pkg/isaac_sim-2021.2.1".
+Replace "~/.local/share/ov/pkg/isaac_sim-2021.2.1" with your installation path if you changed it.
 
 ## TARE planner
 
